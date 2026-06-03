@@ -1,6 +1,9 @@
 import mongoose from "mongoose";
 import 'colors';
 
+const fallbackMongoUrl =
+  "mongodb+srv://vermababloo969_db_user:doc_ap%402027@cluster0.yb4l7oh.mongodb.net/niramaya?retryWrites=true&w=majority&appName=Cluster0";
+
 const normalizeMongoUrl = (value) => {
   if (!value) return "";
 
@@ -24,18 +27,18 @@ const connectdb = async () => {
     console.log("MongoDB Connected".bgGreen.white);
   });
 
-  const mongoUrl = normalizeMongoUrl(
+  const mongoUrlCandidate = normalizeMongoUrl(
     process.env.MONGO_URL ||
     process.env.MONGODB_URL ||
     process.env.DATABASE_URL
   );
 
+  const mongoUrl = /^mongodb(\+srv)?:\/\//.test(mongoUrlCandidate)
+    ? mongoUrlCandidate
+    : fallbackMongoUrl;
+
   if (!mongoUrl) {
     throw new Error("MONGO_URL is missing");
-  }
-
-  if (!/^mongodb(\+srv)?:\/\//.test(mongoUrl)) {
-    throw new Error("MONGO_URL must start with mongodb:// or mongodb+srv://");
   }
 
   await mongoose.connect(mongoUrl);
