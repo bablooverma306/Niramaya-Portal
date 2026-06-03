@@ -1,0 +1,74 @@
+[
+  {
+    "titleKey": "generalCare",
+    "icon": "fa-solid fa-user-doctor"
+  },
+  {
+    "titleKey": "emergencyRoom",
+    "icon": "fa-solid fa-hospital"
+  },
+  {
+    "titleKey": "ambulanceServices",
+    "icon": "fa-solid fa-truck-medical"
+  },
+  {
+    "titleKey": "generalConsultation",
+    "icon": "fa-solid fa-stethoscope"
+  },
+  {
+    "titleKey": "specialistConsultation",
+    "icon": "fa-solid fa-user-doctor"
+  },
+  {
+    "titleKey": "icu",
+    "icon": "fa-solid fa-bed-pulse"
+  },
+  {
+    "titleKey": "ccu",
+    "icon": "fa-solid fa-heart-pulse"
+  },
+  {
+    "titleKey": "nicu",
+    "icon": "fa-solid fa-baby"
+  },
+  {
+    "titleKey": "telemedicine",
+    "icon": "fa-solid fa-video"
+  },
+  {
+    "titleKey": "covidCare",
+    "icon": "fa-solid fa-virus-covid"
+  },
+  {
+    "titleKey": "labTests",
+    "icon": "fa-solid fa-vials"
+  },
+  {
+    "titleKey": "vaccination",
+    "icon": "fa-solid fa-syringe"
+  },
+  {
+    "titleKey": "maternityCare",
+    "icon": "fa-solid fa-person-pregnant"
+  },
+  {
+    "titleKey": "pharmacyDelivery",
+    "icon": "fa-solid fa-pills"
+  },
+  {
+    "titleKey": "physiotherapy",
+    "icon": "fa-solid fa-wheelchair"
+  },
+  {
+    "titleKey": "mentalHealth",
+    "icon": "fa-solid fa-brain"
+  },
+  {
+    "titleKey": "bloodBank",
+    "icon": "fa-solid fa-droplet"
+  },
+  {
+    "titleKey": "preventiveCare",
+    "icon": "fa-solid fa-heart-pulse"
+  }
+]

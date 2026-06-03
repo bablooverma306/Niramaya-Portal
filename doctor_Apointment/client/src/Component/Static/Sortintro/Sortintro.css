@@ -1,0 +1,66 @@
+.sortintro {
+  padding: 30px 20px;
+}
+
+/* Row Flex */
+.sortintro .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Left Image Box */
+.img-container {
+  display: flex;
+  justify-content: center;
+  width:50%;
+}
+
+.hospital-img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Right Content */
+.info-container {
+  padding: 20px 30px;
+}
+
+/* Title */
+.info-container .title {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  color: #222;
+}
+
+/* Subtitle */
+.info-container .subtitle {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #666;
+  font-weight: 500;
+}
+
+/* Paragraph */
+.info-container p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Button (Same UI as Screenshot) */
+.appointment-btn {
+  width: 230px;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: 500;
+}
+.hospital-img{
+  width: 100px;
+  height: 20%;
+  width: 50%;
+}

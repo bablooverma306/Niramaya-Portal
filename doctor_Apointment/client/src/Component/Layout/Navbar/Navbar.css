@@ -1,0 +1,46 @@
+.Navbar-Container{
+    overflow: hidden;
+    border-bottom: 1px solid #090a09;
+    background-color: rgb(250, 250, 250);
+
+   
+
+}
+
+
+
+.topbr-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #216870;
+    color: white;
+    font-weight: normal;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular',  Geneva, Verdana, ans-serif;
+    
+}
+.Navbar{
+    background-color: aliceblue;
+    margin-bottom:  10px; 
+    
+}
+
+.Nav-link:hover {
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular';
+    cursor: pointer;
+    opacity: 0.9;
+    
+}
+
+.brand-loco{
+   width:110% ;
+  height: 100px;
+}
+.brand-loco:hover{
+    width: 110%;
+    height: 110px;
+  
+}

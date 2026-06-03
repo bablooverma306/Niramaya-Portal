@@ -1,0 +1,33 @@
+.massage-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px;
+}
+
+.lacotionmap{
+    box-shadow: 5px 5px  rgba(251, 251, 251, 0.888);
+}
+
+.massage-form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+   
+}
+.massage-form .massage-button:hover{
+    background-color: rgb(88, 232, 242);
+   
+}
+.massage-button{
+    width: 40%;
+    background-color: skyblue;
+}
+.massage-form.h2{
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: darkblue;
+}

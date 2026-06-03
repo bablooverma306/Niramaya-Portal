@@ -1,0 +1,89 @@
+/* SECTION TITLE */
+.facility-title {
+  text-align: center;
+  background: linear-gradient(90deg, #08cb15, #00c6ff);
+  color: white;
+  padding: 15px;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+}
+
+/* CONTAINER */
+.facility-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  padding: 40px;
+  background: #b7defb;
+}
+
+/* CARD */
+.facility-card {
+  background: white;
+  border-radius: 16px;
+  padding: 25px 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* hover effect */
+.facility-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* ICON CIRCLE */
+.icon-box {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #5091f3, #00c6ff);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: all 0.3s ease;
+}
+
+/* ICON */
+.icon-box i {
+  font-size: 30px;
+  color: rgb(25, 26, 25);
+}
+
+/* hover animation */
+.facility-card:hover .icon-box {
+  transform: scale(1.15) rotate(5deg);
+}
+
+/* TITLE */
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #4504f7;
+  line-height: 1.4;
+}
+
+/* subtle top border animation */
+.facility-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background: linear-gradient(90deg, #91f97c, #00c6ff);
+  transition: 0.4s;
+}
+
+.facility-card:hover::before {
+  width: 100%;
+}

@@ -1,0 +1,112 @@
+[
+  {
+    "id": "1",
+    "name": "Dr. Aarav kumar",
+    "specilist": "Dentist",
+    "image": "https://static.vecteezy.com/system/resources/previews/026/375/249/large_2x/ai-generative-portrait-of-confident-male-doctor-in-white-coat-and-stethoscope-standing-with-arms-crossed-and-looking-at-camera-photo.jpg",
+    "about": "Expert in Cosmetic Dentistry & Smile Designing",
+    "experience": "5 year",
+    "available": true,
+    "fees": "200",
+    "icon": "fa-solid fa-teeth"
+  },
+  {
+    "id": "2",
+    "name": "Dr. Neha Patel",
+    "specilist": "Cardiologist",
+    "image": "https://tse1.mm.bing.net/th/id/OIP.ADpkiHRta4KsXkdye6a8IwHaHa?pid=Api&P=0&h=180",
+    "about": "Heart Specialist with experience in ECG & Angiography",
+    "experience": "4 year",
+    "available": true,
+    "fees": "200",
+    "icon": "fa-solid fa-teeth"
+  },
+  {
+    "id": "3",
+    "name": "Dr. Rohan Gupta",
+    "specilist": "Neurologist",
+    "image": " https://static.vecteezy.com/system/resources/previews/027/298/490/large_2x/doctor-posing-portrait-free-photo.jpg",
+    "about": "Brain & Nerve Specialist (Stroke, Migraine expert)",
+    "experience": "6 year",
+    "available": "true",
+    "fees": "200",
+    "icon": "fa-solid fa-teeth"
+  },
+  {
+    "id": "4",
+    "name": "Dr. Priya Verma",
+    "specilist": "Dermatologist",
+    "image": " https://tse1.mm.bing.net/th/id/OIP.fBrt43AymNNaKy5YeAdGQAHaHa?pid=Api&P=0&h=180",
+    "about": "Skin, Hair and Cosmetic Treatment Expert",
+    "experience": "3 year",
+    "available": "true",
+    "fees": "200",
+    "icon": "fa-solid fa-teeth"
+  },
+  {
+    "id": "5",
+    "name": "Dr. Manish Tiwari",
+    "specilist": "Orthopedic",
+    "image": "https://tse4.mm.bing.net/th/id/OIP.VtaScCpUWqGibBvc5XSpBQHaE8?pid=Api&P=0&h=180",
+    "about": "Bone & Joint Specialist (Fracture, Arthritis expert)",
+    "experience": "7 year",
+    "available": "true",
+    "fees": "200",
+    "icon": "fa-solid fa-teeth"
+  },
+  {
+    "id": "6",
+    "name": "Dr. Kavita Singh",
+    "specilist": "Pediatrician",
+    "image": "https://tse2.mm.bing.net/th/id/OIP.VyUctL4scZneYCkPr5VojgHaM9?pid=Api&P=0&h=180",
+    "about": "Children’s Health & Vaccination Specialist",
+    "experience": "5 year",
+    "available": "true",
+    "fees": "200",
+    "icon": "fa-solid fa-teeth"
+  },
+  {
+    "id": "7",
+    "name": "Dr. Aditya Mehra",
+    "specilist": "ENT Specialist",
+    "image": "https://tse2.mm.bing.net/th/id/OIP.YF8nL-vQw1FZMp8mDwmrUwHaE8?pid=Api&P=0&h=180",
+    "about": "Ear, Nose, Throat Specialist (Allergy & Infection)",
+    "experience": "4 year",
+    "available": "true",
+    "fees": "200",
+    "icon": "fa-solid fa-teeth"
+  },
+  {
+    "id": "8",
+    "name": "Dr. Shreya Chhabra",
+    "specilist": "Ophthalmologist",
+    "image": "https://tse4.mm.bing.net/th/id/OIP.AaTyPnLby6K9ohqA6XW1KAHaHa?pid=Api&P=0&h=180",
+    "about": "Eye Specialist (Vision correction & Infection expert)",
+    "experience": "3 year",
+    "available": "true",
+    "fees": "200",
+    "icon": "fa-solid fa-teeth"
+  },
+  {
+    "id": "9",
+    "name": "Dr. Rajat Saxena",
+    "specilist": "General Surgeon",
+    "image": "https://tse1.mm.bing.net/th/id/OIP.y5q8wJVFEDivTF3Wrp00UwHaE8?pid=Api&P=0&h=180",
+    "about": "Expert in Minor & Major Surgical Procedures",
+    "experience": "8 year",
+    "available": "true",
+    "fees": "200",
+    "icon": "fa-solid fa-teeth"
+  },
+  {
+    "id": "10",
+    "name": "Dr. Pooja Mishra",
+    "specilist": "Gynecologist",
+    "image": "https://tse1.mm.bing.net/th/id/OIP.1kyi3ZwLm6-JzbEY0HOLlQHaE8?pid=Api&P=0&h=180",
+    "about": "Women’s Health Specialist (Pregnancy & Hormonal care)",
+    "experience": "2 year",
+    "available": "true",
+    "fees": "200",
+    "icon": "fa-solid fa-teeth"
+  }
+]

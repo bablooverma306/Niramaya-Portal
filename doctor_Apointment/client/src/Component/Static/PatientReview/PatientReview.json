@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Jon",
+    "address": "Rath",
+    "commentKey": "review1",
+    "rating": "5",
+    "pic": "https://static.thenounproject.com/png/1743561-200.png"
+  },
+  {
+    "id": 2,
+    "name": "Amit Sharma",
+    "address": "Delhi",
+    "commentKey": "review2",
+    "rating": "4",
+    "pic": "https://static.thenounproject.com/png/1743561-200.png"
+  },
+  {
+    "id": 3,
+    "name": "Neha Verma",
+    "address": "Lucknow",
+    "commentKey": "review3",
+    "rating": "5",
+    "pic": "https://static.thenounproject.com/png/1743561-200.png"
+  },
+  {
+    "id": 4,
+    "name": "Rohit Singh",
+    "address": "Kanpur",
+    "commentKey": "review4",
+    "rating": "4",
+    "pic": "https://static.thenounproject.com/png/1743561-200.png"
+  },
+  {
+    "id": 5,
+    "name": "Priya Patel",
+    "address": "Ahmedabad",
+    "commentKey": "review5",
+    "rating": "5",
+    "pic": "https://static.thenounproject.com/png/1743561-200.png"
+  }
+]

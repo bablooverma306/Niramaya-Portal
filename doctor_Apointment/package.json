@@ -1,0 +1,32 @@
+{
+  "name": "doctor_apointment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "server": "nodemon server.js",
+    "start": "node server.js",
+    "build:client": "npm --prefix client run build",
+    "build:admin": "npm --prefix ../admin-panel run build",
+    "build": "npm run build:client && npm run build:admin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bablooverma306/doctor_appointment.git"
+  },
+  "keywords": [],
+  "author": "Typeinfo",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "colors": "^1.4.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.3.1",
+    "morgan": "^1.10.1",
+    "multer": "^2.1.1"
+  }
+}

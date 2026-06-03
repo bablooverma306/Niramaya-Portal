@@ -1,0 +1,12 @@
+{
+  "name": "docap-monorepo",
+  "private": true,
+  "workspaces": [
+    "doctor_Apointment",
+    "admin-panel"
+  ],
+  "scripts": {
+    "build": "npm run build --workspace doctor_apointment",
+    "start": "npm run start --workspace doctor_apointment"
+  }
+}
