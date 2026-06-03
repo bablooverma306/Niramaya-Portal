@@ -7,7 +7,17 @@ const connectdb = async () => {
       console.log("MongoDB Connected".bgGreen.white);
     });
 
-    await mongoose.connect(process.env.MONGO_URL);  // ✅ FIXED
+    const mongoUrl = process.env.MONGO_URL?.trim();
+
+    if (!mongoUrl) {
+      throw new Error("MONGO_URL is missing");
+    }
+
+    if (!/^mongodb(\+srv)?:\/\//.test(mongoUrl)) {
+      throw new Error("MONGO_URL must start with mongodb:// or mongodb+srv://");
+    }
+
+    await mongoose.connect(mongoUrl);
   } catch (error) {
     console.log(error);
   }
