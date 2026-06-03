@@ -7,7 +7,7 @@
     "admin-panel"
   ],
   "scripts": {
-    "build": "npm install --prefix doctor_Apointment/client --include=dev && npm install --prefix admin-panel --include=dev && npm --prefix doctor_Apointment/client run build && npm --prefix admin-panel run build",
+    "build": "npm install --prefix doctor_Apointment --include=dev && npm install --prefix doctor_Apointment/client --include=dev && npm install --prefix admin-panel --include=dev && npm --prefix doctor_Apointment/client run build && npm --prefix admin-panel run build",
     "start": "node doctor_Apointment/server.js"
   }
 }
