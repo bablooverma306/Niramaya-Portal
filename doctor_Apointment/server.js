@@ -73,7 +73,7 @@ const startServer = async () => {
     await seedAdmin();
     await seedDoctors();
 
-    app.listen(PORT, () => {
+    app.listen(PORT, "0.0.0.0", () => {
       console.log(`Server running on port ${PORT}`.bgCyan.white);
     });
   } catch (error) {
