@@ -12,6 +12,7 @@ import testRoute from "./routes/testRout.js";
 import userRouter from "./routes/userRouter.js";
 import doctorRout from "./routes/doctorRout.js";
 import webMessageRout from "./routes/webMessageRout.js";
+import seedAdmin from "./utils/seedAdmin.js";
 import seedDoctors from "./utils/seedDoctors.js";
 
 dotenv.config();
@@ -65,6 +66,7 @@ if (shouldServeClient) {
 const startServer = async () => {
   try {
     await connectdb();
+    await seedAdmin();
     await seedDoctors();
 
     app.listen(PORT, () => {

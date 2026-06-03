@@ -8,8 +8,8 @@ import { reset } from '../../redux/slice/authSlice'
 
 const Login = () => {
 
-  const [email, setemail] = useState("2332@gmail.com")
-  const [password, setpassword] = useState("")
+  const [email, setemail] = useState("admin@niramaya.local")
+  const [password, setpassword] = useState("Admin@1234")
 
   const navigate = useNavigate()
   const dispatch = useDispatch()
