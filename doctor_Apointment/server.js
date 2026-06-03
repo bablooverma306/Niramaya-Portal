@@ -45,12 +45,15 @@ const shouldServeClient = fs.existsSync(clientIndexPath);
 const shouldServeAdmin = fs.existsSync(adminIndexPath);
 
 if (shouldServeAdmin) {
-  app.get("/admin", (req, res) => {
-    res.redirect("/admin/");
-  });
+  app.use(
+    "/admin",
+    express.static(adminDistPath, {
+      index: false,
+      redirect: false,
+    })
+  );
 
-  app.use("/admin", express.static(adminDistPath));
-  app.get(/^\/admin(\/.*)?$/, (req, res) => {
+  app.get(/^\/admin(?:\/.*)?$/, (req, res) => {
     res.sendFile(adminIndexPath);
   });
 }
