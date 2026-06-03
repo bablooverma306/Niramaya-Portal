@@ -12,6 +12,7 @@ import testRoute from "./routes/testRout.js";
 import userRouter from "./routes/userRouter.js";
 import doctorRout from "./routes/doctorRout.js";
 import webMessageRout from "./routes/webMessageRout.js";
+import seedDoctors from "./utils/seedDoctors.js";
 
 dotenv.config();
 
@@ -64,6 +65,7 @@ if (shouldServeClient) {
 const startServer = async () => {
   try {
     await connectdb();
+    await seedDoctors();
 
     app.listen(PORT, () => {
       console.log(`Server running on port ${PORT}`.bgCyan.white);
