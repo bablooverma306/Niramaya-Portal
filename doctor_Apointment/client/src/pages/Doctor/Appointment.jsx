@@ -12,13 +12,6 @@ import API from "../../Api/Api.jsx";
 
 const SLOT_ALREADY_BOOKED = "This slot is already booked";
 
-const isRazorpayAuthIssue = (error) => {
-  const message = error?.response?.data?.message || error?.message || "";
-  return /razorpay|authentication failed|credentials are missing|not configured/i.test(
-    message
-  );
-};
-
 const loadRazorpayScript = () =>
   new Promise((resolve) => {
     if (window.Razorpay) {
@@ -98,27 +91,6 @@ const Appointment = () => {
     return message || t("bookingFailed");
   };
 
-  const bookWithoutPayment = async () => {
-    const bookingData = {
-      userId: user._id,
-      doctorId: id,
-      slotDate: extractDate(selectedDate),
-      slotTime: extractTime(selectedDate),
-      amount: docinfo.fees,
-    };
-
-    const { data } = await API.post("/appointment/create", bookingData);
-
-    if (!data?.success) {
-      throw new Error(data?.message || "Unable to book appointment");
-    }
-
-    toast.success("Appointment booked successfully");
-    dispatch(reset());
-    setProcessingPayment(false);
-    navigate("/user/appointment");
-  };
-
   const handleBooking = async () => {
     if (!user?._id) {
       toast.error("Please login first");
@@ -135,8 +107,7 @@ const Appointment = () => {
     try {
       const scriptLoaded = await loadRazorpayScript();
       if (!scriptLoaded) {
-        await bookWithoutPayment();
-        return;
+        throw new Error("Razorpay SDK failed to load");
       }
 
       const bookingData = {
@@ -205,15 +176,6 @@ const Appointment = () => {
       });
       paymentObject.open();
     } catch (error) {
-      if (isRazorpayAuthIssue(error)) {
-        try {
-          await bookWithoutPayment();
-          return;
-        } catch (fallbackError) {
-          toast.error(getBookingErrorMessage(fallbackError));
-        }
-      }
-
       toast.error(getBookingErrorMessage(error));
       dispatch(reset());
       setProcessingPayment(false);

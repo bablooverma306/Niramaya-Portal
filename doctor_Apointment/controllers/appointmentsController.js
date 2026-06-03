@@ -3,7 +3,11 @@ import appointmentModel from "../models/appointmentsModel.js";
 import doctorModel from "../models/doctorModel.js";
 import userModel from "../models/userModel.js";
 
-const sanitizeEnv = (value = "") => value.replace(/;/g, "").trim();
+const sanitizeEnv = (value = "") =>
+  String(value)
+    .replace(/;/g, "")
+    .replace(/^['"`<\s]+|['"`>\s]+$/g, "")
+    .trim();
 const SLOT_ALREADY_BOOKED = "This slot is already booked";
 
 const findSlotConflict = ({ doctorId, slotDate, slotTime }) =>
@@ -16,10 +20,18 @@ const findSlotConflict = ({ doctorId, slotDate, slotTime }) =>
 
 const getRazorpayCredentials = () => {
   const keyId = sanitizeEnv(
-    process.env.RAZORPAY_KEY_ID || process.env.RAZORPAY_id || ""
+    process.env.RAZORPAY_KEY_ID ||
+      process.env.RAZORPAY_ID ||
+      process.env.RAZORPAY_id ||
+      process.env.RAZORPAY_PUBLIC_KEY_ID ||
+      ""
   );
   const keySecret = sanitizeEnv(
-    process.env.RAZORPAY_KEY_SECRET || process.env.RAZORPAY_KEY || ""
+    process.env.RAZORPAY_KEY_SECRET ||
+      process.env.RAZORPAY_SECRET ||
+      process.env.RAZORPAY_KEY ||
+      process.env.RAZORPAY_SECRET_KEY ||
+      ""
   );
 
   return { keyId, keySecret };
