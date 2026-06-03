@@ -3,10 +3,12 @@
   "private": true,
   "workspaces": [
     "doctor_Apointment",
+    "doctor_Apointment/client",
     "admin-panel"
   ],
   "scripts": {
-    "build": "npm run build --workspace doctor_apointment",
-    "start": "npm run start --workspace doctor_apointment"
+    "postinstall": "npm install --prefix doctor_Apointment/client && npm install --prefix admin-panel",
+    "build": "npm --prefix doctor_Apointment/client run build && npm --prefix admin-panel run build",
+    "start": "node doctor_Apointment/server.js"
   }
 }
