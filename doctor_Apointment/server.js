@@ -23,8 +23,6 @@ const adminDistPath = path.join(__dirname, "..", "admin-panel", "dist");
 const clientIndexPath = path.join(clientDistPath, "index.html");
 const adminIndexPath = path.join(adminDistPath, "index.html");
 
-connectdb();
-
 app.use(express.json());
 app.use(cors());
 app.use(morgan("dev"));
@@ -63,6 +61,17 @@ if (shouldServeClient) {
   });
 }
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`.bgCyan.white);
-});
+const startServer = async () => {
+  try {
+    await connectdb();
+
+    app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`.bgCyan.white);
+    });
+  } catch (error) {
+    console.error("Server startup failed:".bgRed.white, error.message);
+    process.exit(1);
+  }
+};
+
+startServer();

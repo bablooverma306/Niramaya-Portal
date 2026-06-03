@@ -20,29 +20,25 @@ const normalizeMongoUrl = (value) => {
 };
 
 const connectdb = async () => {
-  try {
-    mongoose.connection.on("connected", () => {
-      console.log("MongoDB Connected".bgGreen.white);
-    });
+  mongoose.connection.on("connected", () => {
+    console.log("MongoDB Connected".bgGreen.white);
+  });
 
-    const mongoUrl = normalizeMongoUrl(
-      process.env.MONGO_URL ||
-      process.env.MONGODB_URL ||
-      process.env.DATABASE_URL
-    );
+  const mongoUrl = normalizeMongoUrl(
+    process.env.MONGO_URL ||
+    process.env.MONGODB_URL ||
+    process.env.DATABASE_URL
+  );
 
-    if (!mongoUrl) {
-      throw new Error("MONGO_URL is missing");
-    }
-
-    if (!/^mongodb(\+srv)?:\/\//.test(mongoUrl)) {
-      throw new Error("MONGO_URL must start with mongodb:// or mongodb+srv://");
-    }
-
-    await mongoose.connect(mongoUrl);
-  } catch (error) {
-    console.log(error);
+  if (!mongoUrl) {
+    throw new Error("MONGO_URL is missing");
   }
+
+  if (!/^mongodb(\+srv)?:\/\//.test(mongoUrl)) {
+    throw new Error("MONGO_URL must start with mongodb:// or mongodb+srv://");
+  }
+
+  await mongoose.connect(mongoUrl);
 };
 
 export default connectdb;
